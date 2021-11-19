@@ -1,0 +1,22 @@
+body {
+	background: #111;
+	color: #f4f4f4;
+}
+
+.header, .nav__item {
+	background: #373737;
+	color: #f4f4f4;
+}
+
+.nav__item:hover {
+	background: #444;
+}
+
+.theme-button {
+	color: #f4f4f4;
+	background: #4f7faf;
+}
+
+.theme-button:hover {
+	background: #6f9fcf;
+}
