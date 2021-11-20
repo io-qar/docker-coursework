@@ -32,7 +32,7 @@
 				<?php
 					$sql = 'SELECT * FROM products';
 					$result = $mysqli->query($sql);
-					foreach ($resuslt as $row) {
+					foreach ($result as $row) {
 						echo "
 							<tr>
 								<td>{$row['ID']}</td>

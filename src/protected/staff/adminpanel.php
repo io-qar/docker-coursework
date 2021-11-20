@@ -13,7 +13,7 @@
 		}
 	}
 ?>
-<html>
+<html>	
 	<head>
 		<title>Добавить продукт</title>
 		<link rel="stylesheet" href="/protected/styles/style.css" type="text/css"/>
