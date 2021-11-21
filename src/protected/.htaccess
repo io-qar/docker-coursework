@@ -1,4 +1,0 @@
-AuthType Basic   
-AuthName "Private zone. Only for administrator!" 
-AuthUserFile /var/www/html/protected/.htpasswd   
-require user Tim Ken admin Fan Jim
