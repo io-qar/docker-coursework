@@ -1,7 +1,7 @@
-[*.{php,css,sql,conf,js}]
+[*.{php, css, sql, conf, js, html}]
 indent_style = tab
 indent_size = 4
 
-[*.{yaml,yml}]
+[*.{yaml, yml}]
 indent_style = space
 indent_size = 2

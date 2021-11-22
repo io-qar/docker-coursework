@@ -2,8 +2,8 @@
 	<head>Загрузка поста</head>
 	<body>
 		<div id="uploadfile">
-			<p>Отправьте PDF-файл на сервер</p>
-			<form action="/protected/functions/upload.php" method="post" enctype="multipart/form-data">
+			<p>Отправьте txt-файл на сервер</p>
+			<form action="/protected/upload.php" method="post" enctype="multipart/form-data">
 				<input type="file" name="file" accept=".txt">
 				<input type="submit" name="submit" value="Отправить">
 			</form>
@@ -26,12 +26,8 @@
 				if (in_array($fileType, $allowTypes)) {
 					if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
 						$mime = mime_content_type($targetFilePath);
-						// if ($mime != 'application/txt') {
-							// unlink($targetFilePath);
-							// die('Разрешено загружать только файлы ---!');
-						// }
 						$statusMsg = "Файл '".$fileName."'успешно загружен! Вы будете перенаправлены на главную страницу через 5 секунд!";
-						header('Refresh: 5; url="../../index.php"');
+						header('Refresh: 5; url="../index.php"');
 					} else {
 						$statusMsg = "Не удалось загрузить файл из-за ошибки №".$_FILES["file"]["error"];
 					}

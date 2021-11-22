@@ -1,5 +1,5 @@
 <?php
-	// session_start();
+	session_start();
 	if (isset($_POST['name'])) {
 		$name = $_POST['name'];
 		if ($name == '') {
@@ -43,7 +43,7 @@
 	$result2 = $mysqli->query("INSERT INTO users (name, password) VALUES ('$name', '$password')");
 	// Проверяем, есть ли ошибки
 	if ($result2 === True) {
-		echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт";
+		echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт ...";
 	} else {
 		echo "Ошибка! Вы не зарегистрированы.";
 	}
