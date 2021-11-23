@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 create table if not exists posts (
 	postId int AUTO_INCREMENT PRIMARY key,
-	postAuthor varchar(50) not null references users (id),
-	postBody text not null
+	postAuthorId int(11) not null,
+	postTargetPath text not null,
+	constraint fk_posts_users_id foreign key (postAuthorId) references users (id)
 )

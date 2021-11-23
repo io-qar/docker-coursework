@@ -3,30 +3,25 @@
 	</head>
 	<body>
 		<?php
-			$pattern = "/var/www/html/uploads/*.txt";
-			// system("cd uplo	ads");
-			// $filelist = glob("/var/www/html/uploads/*.txt");
-			// print_r($filelist);
-			foreach (glob($pattern) as $filename) {
-				// echo "$filename размер ".filesize($filename)."\n";
-				$data = file_get_contents($filename);
-				echo($data);
-				echo("<br><hr>");
-			}
-			// $cnt = system("ls uploads | wc -l");
-			// while ($cnt > 0) {
-
-			// }
-
-			// $filename = "/var/www/html/uploads/whatfile_1.txt";
+			session_start();
+			include 'connect2db.php';
 			
-			// if (file_exists($filename)) {
-			// 	echo 'exists';
-			// 	$data = file_get_contents($filename);
+			$result = $mysqli->query("select users.name, posts.postTargetPath from users join posts on posts.postAuthorId = users.id");
+			$posts = $result->fetch_all(MYSQLI_ASSOC);
 
-			// 	var_dump($data);
-			// 	system("ls");
-			// }
+			foreach ($posts as $post) {
+				// echo json_encode($post);
+
+				$author = $post["name"];
+				$data = file_get_contents($post["postTargetPath"]);
+				// fileowner($post) = $_SESSION["name"];
+				echo "Автор поста:".$author."\n";
+				echo $data;
+				// $meta = get_meta_tags($post);
+				// echo $meta["size"];
+				echo "<br><hr>";
+			}
+
 		?>
 	</body>
 </html>

@@ -1,3 +1,4 @@
 # ignore uploads
 uploads/
+# ignore mysql output
 db-data/

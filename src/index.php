@@ -31,7 +31,7 @@
 		<h2>Недавние посты</h2>
 		<hr>
 		<?php
-			include_once 'protected/file-reader.php';
+			include 'protected/file-reader.php';
 		?>
 	</body>
 </html>
