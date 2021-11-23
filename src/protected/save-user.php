@@ -19,30 +19,24 @@
 		exit("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
 	}
 	
-	//если логин и пароль введены, то обрабатываем их, чтобы теги и скрипты не работали, мало ли что люди могут ввести
 	$name = stripslashes($name);
 	$name = htmlspecialchars($name);
 	$password = stripslashes($password);
 	$password = htmlspecialchars($password);
  	
-	//удаляем лишние пробелы
 	$name = trim($name);
 	$password = trim($password);
  	
-	// подключаемся к базе
 	include "connect2db.php";
-	// проверка на существование пользователя с таким же логином
 	$result = $mysqli->query("SELECT id FROM users WHERE name = '$name'");
 	$myrow = $result->fetch_array();
 
 	if (!empty($myrow['id'])) {
 		exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
 	}
-	
-	// если такого нет, то сохраняем данные
+
 	$result2 = $mysqli->query("INSERT INTO users (name, password) VALUES ('$name', '$password')");
-	// Проверяем, есть ли ошибки
-	if ($result2 === True) {
+	if ($result2) {
 		echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт ...";
 	} else {
 		echo "Ошибка! Вы не зарегистрированы.";

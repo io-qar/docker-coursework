@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Главная</title>
-		<link rel="stylesheet" href="protected/styles/main.css">
+		<link rel="stylesheet" href="/styles/main.css">
 		<?php
 			session_start();
 		?>
@@ -12,7 +12,11 @@
 				<nav class="navbar">
 					<a href="/view/reg.html" class="nav__item">Зарегистрироваться</a>
 					<a href="/view/login.html" class="nav__item">Войти</a>
-					<a href="/protected/upload.php" class="nav__item">Загрузить пост</a>
+					<?php
+						if (isset($_SESSION['name'])) {
+							echo '<a href="/model/user-page.php" class="nav__item">Ваш профиль</a>';
+						}
+					?>
 					<a href="/protected/logout.php" class="nav__item">Выйти из аккаунта</a>
 				</nav>
 			</div>
