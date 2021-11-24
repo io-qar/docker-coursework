@@ -23,5 +23,9 @@
 			<input name="newName" type="text" size="50" maxlength="50">
 			<input type="submit" name="submit" value="Изменить">
 		</form>
+		<h3>Ваши посты:</h3>
+		<?php
+			include_once '../protected/file-reader.php';
+		?>
 	</body>
 </html>

@@ -20,7 +20,7 @@ services:
     ports:
       - 8001:8001
     volumes:
-      - ./src:/var/www/html/
+      - ./src:/var/www/html
     depends_on:
       - db
   nginx:
