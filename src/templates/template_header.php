@@ -13,6 +13,7 @@
 					<?php
 						if (isset($_SESSION['name'])) {
 							echo '<a href="/view/view_user-page.php" class="nav__item">Ваш профиль</a>';
+							echo '<a href="/view/view_upload.php" class="nav__item">Загрузить пост</a>';
 							echo '<a href="/protected/logout.php" class="nav__item">Выйти из аккаунта</a>';
 						} else {
 							echo '<a href="/view/view_reg.php" class="nav__item">Зарегистрироваться</a>';

@@ -11,12 +11,17 @@
 			$this->allowTypes = "txt";
 		}
 		
-		function set_params_upload() {
-			if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
-				return $fileType = pathinfo($this->targetDir.$basename($_FILES["file"]["name"], PATHINFO_EXTENSION);	
-			}
+		public function set_msg($status) {
+			$this->statusMsg = $status;
+		}
+		public function get_msg() {
+			return $this->statusMsg;
 		}
 
-		
+		function set_params_upload() {
+			if (isset($_POST["submit"]) && !empty($_FILES["file"]["name"])) {
+				return $fileType = pathinfo($this->targetDir.$basename($_FILES["file"]["name"], PATHINFO_EXTENSION));
+			}
+		}
 	}
 ?>
