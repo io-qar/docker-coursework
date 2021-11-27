@@ -1,11 +1,11 @@
 <html>
 	<head>
-		<title>Регистрация</title>
+		<title>Вход</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h2>Регистрация</h2>
-		<form action="/protected/save-user.php" method="post">
+		<h2>Вход</h2>
+		<form action="/controllers/controller_login.php" method="post">
 			<p>
 				<label>Ваш логин:<br></label>
 				<input name="name" type="text" size="50" maxlength="50">
@@ -15,7 +15,7 @@
 				<input name="password" type="password" size="50" maxlength="50">
 			</p>
 			<p>
-				<input type="submit" name="submit" value="Зарегистрироваться">
+				<input type="submit" name="submit" value="Войти">
 			</p>
 		</form>
 	</body>
