@@ -10,11 +10,6 @@
 				<input type="file" name="file" accept=".txt">
 				<input type="submit" name="submit" value="Отправить">
 			</form>
-			<!-- <p>Файлы на сервере:</p> -->
-			<?php
-				// $result = shell_exec('cd .. && cd .. && cd uploads && ls && cd ..');
-				// echo str_replace(" ", "\n", $result);
-			?>
 		</div>
 
 		<?php
