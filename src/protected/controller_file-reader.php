@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	include $_SERVER['DOCUMENT_ROOT'].'/model/model_post.php';
 	$post_m = new Model_post();
 
