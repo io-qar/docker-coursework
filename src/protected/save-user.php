@@ -25,7 +25,7 @@
 	$name = trim($name);
 	$password = trim($password);
  	
-	include "connect2db.php";
+	include $_SERVER['DOCUMENT_ROOT'].'/model/connect2db.php';
 	$result = $mysqli->query("SELECT id FROM users WHERE name = '$name'");
 	$myrow = $result->fetch_array();
 

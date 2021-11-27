@@ -1,7 +1,5 @@
-<html>
-	<head>
-	</head>
-	<body>
+// sql запросы вынести в модели юзера и постов
+// вынетси в модель постов чтение файла
 		<?php
 			session_start();
 			include 'connect2db.php';
@@ -29,5 +27,3 @@
 				echo "<br><hr>";
 			}
 		?>
-	</body>
-</html>
