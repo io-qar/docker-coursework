@@ -1,4 +1,4 @@
 # ignore uploads
-uploads/
+src/uploads/
 # ignore mysql output
 db-data/
