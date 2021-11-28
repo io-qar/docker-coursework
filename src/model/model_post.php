@@ -19,11 +19,11 @@
 		}
 		
 		function get_posts_for_user($user_id) {
-			$result = $this->mysqli->query("select users.name, posts.postTargetPath from users join posts on posts.postAuthorId = users.id where users.id = '$user_id'");
+			$result = $this->mysqli->query("select users.name, posts.postTargetPath, posts.postId from users join posts on posts.postAuthorId = users.id where users.id = '$user_id'");
 			return $this->construct_user($result);
 		}
 		function get_all_posts() {
-			$result = $this->mysqli->query("select users.name, posts.postTargetPath from users join posts on posts.postAuthorId = users.id");
+			$result = $this->mysqli->query("select users.name, posts.postTargetPath, posts.postId from users join posts on posts.postAuthorId = users.id");
 			return $this->construct_user($result);
 		}
 	}

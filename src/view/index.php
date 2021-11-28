@@ -10,6 +10,6 @@
 <h2>Недавние посты</h2>
 <hr>
 <?php
-	include 'protected/controller_file-reader.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/protected/controller_file-reader.php';
 	include $_SERVER['DOCUMENT_ROOT'].'/templates/template_footer.php';
 ?>
